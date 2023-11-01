@@ -1,0 +1,263 @@
+.container {
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../../images/logo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoContainer {
+  width: 50px;
+  height: 50px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.title {
+  font-size: 1.9rem;
+  font-weight: bold;
+  font-family: "Corsiva", cursive, Arial, sans-serif;
+  background: linear-gradient(to right, #467bf7, #9dd1fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.innerBox {
+  min-width: 480px;
+  height: auto;
+  width: auto;
+  background-color: #ffffff9d;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer .error {
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: #f44336;
+  text-align: center;
+}
+
+.footer button {
+  outline: none;
+  border: none;
+  background-color: #4099ffdc;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 16px;
+  width: 100%;
+  transition: 100ms;
+  cursor: pointer;
+}
+
+.footer button:disabled {
+  background-color: gray !important;
+}
+
+.footer button:hover {
+  background-color: #1e9be9;
+}
+
+.footer p {
+  font-weight: 700;
+  color: #000;
+}
+
+.footer p span a {
+  font-weight: bold;
+  color: #409cff;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modalContent {
+  min-width: 480px;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+}
+
+.modalContent h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.modalContent button {
+  outline: none;
+  border: none;
+  background-color: #4099ffdc;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 16px;
+  width: 100%;
+  transition: 100ms;
+  cursor: pointer;
+}
+
+.modalContent button:hover {
+  background-color: #1e9be9;
+}
+
+.modalContent {
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.stylishFont {
+  font-style: oblique;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .innerBox {
+    min-width: unset;
+    width: 80%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .innerBox {
+    width: 90%;
+    padding: 20px;
+    gap: 20px;
+    min-width: unset;
+  }
+
+  .container {
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;   
+    background-image: url("../../images/logo.jpg");
+    background-size:auto;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .header {
+    gap: 5px;
+  }
+
+  .logoContainer {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .footer {
+    gap: 10px;
+  }
+  
+  .footer button {
+    padding: 8px 14px;
+  }
+
+  .modalContent {
+    width: 90%;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .closeButton {
+    font-size: 18px;
+  }
+}

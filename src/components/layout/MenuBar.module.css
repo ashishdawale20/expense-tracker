@@ -1,0 +1,28 @@
+.logoImage {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .rotating {
+    animation: rotation 2s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+ 
+.navbar {
+    background: linear-gradient(to right, #12c8ff, #5093ff, #12c8ff) !important;
+  }
+  
+  .nav-link {
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text; /* Add the standard background-clip property */
+  }
