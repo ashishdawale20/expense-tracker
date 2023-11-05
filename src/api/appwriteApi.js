@@ -12,6 +12,18 @@ let appwriteApi = {
     const result = databases.createDocument(databaseId, collectionId,  ID.unique(), document);
     return result;
   },
+  getDocument: (databaseId, collectionId, documentId) => {
+    const result = databases.getDocument(databaseId, collectionId, documentId);
+    return result;
+  },
+  listDocuments: (databaseId, collectionId) => {
+    const result = databases.listDocuments(databaseId, collectionId);
+    return result;
+  },
+  filterDocuments: (databaseId, collectionId, query) => {
+    const result = databases.listDocuments(databaseId, collectionId, query);
+    return result;
+  },
   createEmailSession : (email, password) => {
     const result = account.createEmailSession(email, password);
     return result;

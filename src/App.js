@@ -5,6 +5,7 @@ import MenuBar from "./components/layout/menubar";
 import ExcelUploadAndSubmit from "./components/ExcelUploadAndSubmit";
 import Login from "./components/login/Login";
 import SignupScreen from "./components/Signup/Signup"
+import ExpenseDashboard from "./components/home";
 
 export default function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
@@ -41,7 +42,9 @@ export default function App() {
           {isSignedIn ? (
               <React.Fragment>
                 <Route path="/ExcelUploadAndSubmit" element={<ExcelUploadAndSubmit />} />
-              </React.Fragment> )
+                <Route path="/home" element={<ExpenseDashboard />} />
+              </React.Fragment>
+              )
               : (
               <React.Fragment>
                 <Route path="/" element={<Login onLogin={signin} onSignup={signup} />} />
