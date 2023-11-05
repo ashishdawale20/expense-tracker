@@ -119,16 +119,16 @@ const MenuBar = ({ isSignedIn, signout }) => {
                       className={`nav-link ${styles.navLink}`}
                       style={{ color: "white" }}
                     >
-                      Boats
+                      Dashboard
                     </Link>
                   </li>
                   <li className="nav-item">
                     <Link
-                      to="/ImportExpense"
+                      to="/ExcelUploadAndSubmit"
                       className={`nav-link ${styles.navLink}`}
                       style={{ color: "white" }}
                     >
-                      MyBooking
+                      ImportExpense
                     </Link>
                   </li>
                 </>
